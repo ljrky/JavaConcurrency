@@ -1,8 +1,5 @@
 import java.io.InterruptedIOException;
 
-/**
- * Created by kerua on 7/7/2015.
- */
 public class InterruptThread {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Thread Static Functions");
@@ -14,25 +11,26 @@ public class InterruptThread {
                 "A kid will eat ivy too"
         };
 
-        for (int i = 0; i < importantInfo.length; i++) {
-            System.out.println("Thread is sleeping");
-            Thread.sleep(4000);
-            System.out.println(importantInfo[i]);
-        }
-        Thread InterruptedThread = new Thread(new InterrupteThread());
-        InterruptedThread.start();
-        System.out.println("Thread status is : " + InterruptedThread.isInterrupted());
-        InterruptedThread.interrupt();
+//        for (int i = 0; i < importantInfo.length; i++) {
+//            System.out.println("Thread is sleeping");
+//            Thread.sleep(4000);
+//            System.out.println(importantInfo[i]);
+//        }
+
+//        Thread InterruptedThread = new Thread(new InterrupteThread());
+//        InterruptedThread.start();
+//        System.out.println("Thread status is : " + InterruptedThread.isInterrupted());
+//        InterruptedThread.interrupt();
 
 //        Thread InterruptedByOtherThread = new Thread(new InterruptedByOthers());
 //        InterruptedByOtherThread.start();
-//        System.out.println("Thread status is : " + InterruptedByOtherThread.isInterrupted());
+//        System.out.println("Thread's interrupt status is : " + InterruptedByOtherThread.isInterrupted());
 //        InterruptedByOtherThread.interrupt();
-//        System.out.println("Thread status is : " + InterruptedByOtherThread.isInterrupted());
+//        System.out.println("Thread's interrupt status is : " + InterruptedByOtherThread.isInterrupted());
 
-//        Thread ThrowInterruptedExceptionThead = new Thread(new InterruptedThrowException());
-//        ThrowInterruptedExceptionThead.start();
-//        ThrowInterruptedExceptionThead.interrupt();
+        Thread ThrowInterruptedExceptionThread = new Thread(new InterruptedThrowException());
+        ThrowInterruptedExceptionThread.start();
+        ThrowInterruptedExceptionThread.interrupt();
     }
 }
 
