@@ -26,7 +26,7 @@ public class SimpleThread {
 
 
     private static void threadMessage(String message){
-        System.out.println(Thread.currentThread().getName() + "is running" + message);
+        System.out.println(Thread.currentThread().getName() + " is running " + message);
     }
 }
 
@@ -44,7 +44,7 @@ class MessageLoop implements Runnable{
         //good to have all instruments in try catch
         try {
             for (int i = 0; i < importantInfo.length; i++) {
-                Thread.sleep(1000);
+                Thread.sleep(4000);
                 System.out.println(importantInfo[i]);
             }
         }catch (InterruptedException e) {

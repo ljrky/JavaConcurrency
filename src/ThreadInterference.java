@@ -54,7 +54,9 @@ public class ThreadInterference {
 
         @Override
         public void run() {
+            System.out.println("Thread : " + Thread.currentThread().getName() + " is running");
             this.counter.increment();
+            System.out.println("Thread : " + Thread.currentThread().getName() + " is ended");
         }
     }
 
