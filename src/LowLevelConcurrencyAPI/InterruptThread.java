@@ -1,4 +1,4 @@
-import java.io.InterruptedIOException;
+package LowLevelConcurrencyAPI;
 
 public class InterruptThread {
     public static void main(String[] args) throws InterruptedException {
@@ -17,12 +17,12 @@ public class InterruptThread {
 //            System.out.println(importantInfo[i]);
 //        }
 
-//        Thread InterruptedThread = new Thread(new InterrupteThread());
+//        Thread InterruptedThread = new Thread(new LowLevelConcurrencyAPI.InterrupteThread());
 //        InterruptedThread.start();
 //        System.out.println("Thread status is : " + InterruptedThread.isInterrupted());
 //        InterruptedThread.interrupt();
 
-//        Thread InterruptedByOtherThread = new Thread(new InterruptedByOthers());
+//        Thread InterruptedByOtherThread = new Thread(new LowLevelConcurrencyAPI.InterruptedByOthers());
 //        InterruptedByOtherThread.start();
 //        System.out.println("Thread's interrupt status is : " + InterruptedByOtherThread.isInterrupted());
 //        InterruptedByOtherThread.interrupt();

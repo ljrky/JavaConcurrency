@@ -1,3 +1,5 @@
+package LowLevelConcurrencyAPI;
+
 public class SynchronizedStatement {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("This is sample of synchronized statement");

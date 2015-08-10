@@ -1,3 +1,5 @@
+package LowLevelConcurrencyAPI;
+
 public class SimpleThreads {
 
     // Display a message, preceded by
@@ -38,22 +40,22 @@ public class SimpleThreads {
             throws InterruptedException {
 
         // Delay, in milliseconds before
-        // we interrupt MessageLoop
+        // we interrupt LowLevelConcurrencyAPI.MessageLoop
         // thread (default one hour).
         long patience = 1000 * 15;
 
-        threadMessage("Starting MessageLoop thread");
+        threadMessage("Starting LowLevelConcurrencyAPI.MessageLoop thread");
         long startTime = System.currentTimeMillis();
         Thread t = new Thread(new MessageLoop());
         t.start();
 
-        threadMessage("Waiting for MessageLoop thread to finish");
-        // loop until MessageLoop
+        threadMessage("Waiting for LowLevelConcurrencyAPI.MessageLoop thread to finish");
+        // loop until LowLevelConcurrencyAPI.MessageLoop
         // thread exits
         while (t.isAlive()) {
             threadMessage("Still waiting...");
             // Wait maximum of 1 second
-            // for MessageLoop thread
+            // for LowLevelConcurrencyAPI.MessageLoop thread
             // to finish.
             t.join(1000);
             if (((System.currentTimeMillis() - startTime) > patience)

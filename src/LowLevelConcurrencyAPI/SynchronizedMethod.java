@@ -1,3 +1,5 @@
+package LowLevelConcurrencyAPI;
+
 public class SynchronizedMethod {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("This is sample of synchronized method");

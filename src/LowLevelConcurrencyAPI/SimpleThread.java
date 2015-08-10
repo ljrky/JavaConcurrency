@@ -1,3 +1,4 @@
+package LowLevelConcurrencyAPI;
 
 public class SimpleThread {
     public static void main(String args[]) throws InterruptedException {
@@ -5,12 +6,12 @@ public class SimpleThread {
         //Maxim wait time
         long patience = 1000 * 10;
 
-        threadMessage("MessageLoop thread");
+        threadMessage("LowLevelConcurrencyAPI.MessageLoop thread");
         long startTime = System.currentTimeMillis();
         Thread t = new Thread(new MessageLoop());
         t.start();
 
-        threadMessage("Waiting for MessageLoop thread to finish");
+        threadMessage("Waiting for LowLevelConcurrencyAPI.MessageLoop thread to finish");
         while(t.isAlive()){
             threadMessage("Still waiting...");
             t.join(1000);
