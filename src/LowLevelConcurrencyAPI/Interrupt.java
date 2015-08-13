@@ -1,6 +1,6 @@
 package LowLevelConcurrencyAPI;
 
-public class InterruptThread {
+public class Interrupt {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Thread Static Functions");
 

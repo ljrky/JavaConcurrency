@@ -1,6 +1,6 @@
 package LowLevelConcurrencyAPI;
 
-public class SimpleThread {
+public class ThreadSample {
     public static void main(String args[]) throws InterruptedException {
 
         //Maxim wait time

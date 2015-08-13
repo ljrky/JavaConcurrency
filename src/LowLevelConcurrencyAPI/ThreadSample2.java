@@ -1,6 +1,6 @@
 package LowLevelConcurrencyAPI;
 
-public class SimpleThreads {
+public class ThreadSample2 {
 
     // Display a message, preceded by
     // the name of the current thread

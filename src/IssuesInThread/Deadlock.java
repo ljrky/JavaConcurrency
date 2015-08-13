@@ -1,4 +1,4 @@
-package LowLevelConcurrencyAPI;
+package IssuesInThread;
 
 public class Deadlock {
     static class Friend{

@@ -1,4 +1,4 @@
-package LowLevelConcurrencyAPI;
+package IssuesInThread;
 
 public class MemoryConsistencyError {
     public static void main(String[] args) throws InterruptedException {
