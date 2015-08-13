@@ -1,6 +1,7 @@
 package LowLevelThead;
 
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
@@ -10,7 +11,7 @@ public class Immutable {
 
         final ImmutableCounter[] counter = {new ImmutableCounter(0)};
 
-        Executor executor = Executors.newFixedThreadPool(4);
+        ExecutorService executor = Executors.newFixedThreadPool(4);
 
         for (int i = 0; i < 5; i++) {
             executor.execute(new Runnable() {
@@ -42,6 +43,8 @@ public class Immutable {
                 }
             });
         }
+
+        executor.shutdown();
     }
 
 }

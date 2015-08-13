@@ -2,6 +2,7 @@ package HighLevelConcurrencyObjects;
 
 import java.util.Random;
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -11,7 +12,7 @@ public class Atomic {
 
         AtomicCounter Counter = new AtomicCounter();
 
-        Executor executor = Executors.newFixedThreadPool(4);
+        ExecutorService executor = Executors.newFixedThreadPool(4);
 
         for (int i = 0; i < 5; i++) {
             executor.execute(new Runnable() {
@@ -46,7 +47,7 @@ public class Atomic {
             });
         }
 
-
+        executor.shutdown();
         System.out.println("Eventually Counter is : " + Counter.getCounter());
     }
 }
