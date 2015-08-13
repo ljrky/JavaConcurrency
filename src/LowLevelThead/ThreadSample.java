@@ -1,4 +1,4 @@
-package LowLevelConcurrencyAPI;
+package LowLevelThead;
 
 public class ThreadSample {
     public static void main(String args[]) throws InterruptedException {
@@ -6,12 +6,12 @@ public class ThreadSample {
         //Maxim wait time
         long patience = 1000 * 10;
 
-        threadMessage("LowLevelConcurrencyAPI.MessageLoop thread");
+        threadMessage("LowLevelThead.MessageLoop thread");
         long startTime = System.currentTimeMillis();
         Thread t = new Thread(new MessageLoop());
         t.start();
 
-        threadMessage("Waiting for LowLevelConcurrencyAPI.MessageLoop thread to finish");
+        threadMessage("Waiting for LowLevelThead.MessageLoop thread to finish");
         while(t.isAlive()){
             threadMessage("Still waiting...");
             t.join(1000);

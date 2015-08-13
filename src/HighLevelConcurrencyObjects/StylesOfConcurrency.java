@@ -23,6 +23,7 @@ public class StylesOfConcurrency {
         for (int i = 0; i < 5; i++) {
             executorService.execute(new ThreadSample());
         }
+        executorService.shutdown();
 
         //Executor Sample with cached ThreadPool
         //New an Executor with cached thread pool, fit short life cycle task best as it could re-use thread
@@ -31,6 +32,7 @@ public class StylesOfConcurrency {
         for (int i = 0; i < 5; i++) {
             executorServiceForCachedPool.execute(new ThreadSample());
         }
+        executorServiceForCachedPool.shutdown();
 
         //Executor Sample with Callable Thread
         System.out.println("Launch Callable Sample");
@@ -48,6 +50,8 @@ public class StylesOfConcurrency {
                 e.printStackTrace();
             }
         }
+
+        executorServiceForCallable.shutdown();
     }
 }
 

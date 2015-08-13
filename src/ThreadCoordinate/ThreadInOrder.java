@@ -1,7 +1,9 @@
 package ThreadCoordinate;
 
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class ThreadInOrder {
 
@@ -15,7 +17,8 @@ public class ThreadInOrder {
         ThreadPrinter printerB = new ThreadPrinter("B", a, b);
         ThreadPrinter printerC = new ThreadPrinter("C", b, c);
 
-        Executor executor = Executors.newFixedThreadPool(4);
+        ExecutorService executor = Executors.newFixedThreadPool(4);
+
         executor.execute(printerA);
         //Ensure Thread is launch in order
         Thread.sleep(10);
@@ -23,6 +26,9 @@ public class ThreadInOrder {
         //Ensure Thread is launch in order
         Thread.sleep(10);
         executor.execute(printerC);
+
+        executor.awaitTermination(2, TimeUnit.SECONDS);
+        executor.shutdownNow();
     }
 
 }
@@ -49,13 +55,12 @@ class ThreadPrinter implements Runnable{
                 synchronized (self){
                     System.out.print(name);
                     count--;
-
                     //Release current object's lock, tell other threads which is waiting for current object to unlock
                     self.notify();
                 }
                 //Release previous object's lock
                 try {
-                    pre.wait();
+                    pre.wait(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

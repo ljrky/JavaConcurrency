@@ -1,4 +1,4 @@
-package LowLevelConcurrencyAPI;
+package LowLevelThead;
 
 public class Interrupt {
     public static void main(String[] args) throws InterruptedException {
@@ -17,12 +17,12 @@ public class Interrupt {
 //            System.out.println(importantInfo[i]);
 //        }
 
-//        Thread InterruptedThread = new Thread(new LowLevelConcurrencyAPI.InterrupteThread());
+//        Thread InterruptedThread = new Thread(new LowLevelThead.InterrupteThread());
 //        InterruptedThread.start();
 //        System.out.println("Thread status is : " + InterruptedThread.isInterrupted());
 //        InterruptedThread.interrupt();
 
-//        Thread InterruptedByOtherThread = new Thread(new LowLevelConcurrencyAPI.InterruptedByOthers());
+//        Thread InterruptedByOtherThread = new Thread(new LowLevelThead.InterruptedByOthers());
 //        InterruptedByOtherThread.start();
 //        System.out.println("Thread's interrupt status is : " + InterruptedByOtherThread.isInterrupted());
 //        InterruptedByOtherThread.interrupt();

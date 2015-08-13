@@ -1,8 +1,8 @@
-package LowLevelConcurrencyAPI;
+package LowLevelThead;
 
 public class Volatile {
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("This is sample of LowLevelConcurrencyAPI.Volatile Keyword");
+        System.out.println("This is sample of LowLevelThead.Volatile Keyword");
 
         SynchronizedCounter counter = new SynchronizedCounter();
 

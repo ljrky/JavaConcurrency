@@ -1,4 +1,4 @@
-package LowLevelConcurrencyAPI;
+package LowLevelThead;
 
 public class SynchronizedMethod {
     public static void main(String[] args) throws InterruptedException {

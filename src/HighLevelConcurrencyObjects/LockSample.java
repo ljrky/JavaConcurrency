@@ -4,10 +4,10 @@ import java.util.Random;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Safelock {
+public class LockSample{
     static class Friend{
         private final String name;
-        private final Lock lock = new ReentrantLock();
+        private final java.util.concurrent.locks.Lock lock = new ReentrantLock();
 
         public Friend(String name) {
             this.name = name;
