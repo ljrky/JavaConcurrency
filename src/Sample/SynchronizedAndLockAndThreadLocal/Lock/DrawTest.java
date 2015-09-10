@@ -1,4 +1,4 @@
-package Sample.SynchronizedAndLock.Lock;
+package Sample.SynchronizedAndLockAndThreadLocal.Lock;
 
 public class DrawTest
 {

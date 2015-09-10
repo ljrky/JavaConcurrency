@@ -1,4 +1,4 @@
-package Sample.SynchronizedAndLock.synchronizedMethod;
+package Sample.SynchronizedAndLockAndThreadLocal.synchronizedMethod;
 
 public class Account
 {

@@ -1,4 +1,4 @@
-package Sample.SynchronizedAndLock.synchronizedBlock;
+package Sample.SynchronizedAndLockAndThreadLocal.synchronizedBlock;
 
 public class DrawTest
 {

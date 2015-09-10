@@ -1,4 +1,4 @@
-package Sample.SynchronizedAndLock.Lock;
+package Sample.SynchronizedAndLockAndThreadLocal.Lock;
 
 import java.util.concurrent.locks.*;
 
