@@ -2,7 +2,7 @@ package JavaOfficalSample.LowLevelThead;
 
 public class SynchronizedMethod {
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("This is sample of synchronized method");
+        System.out.println("This is sample of synchronizedsample method");
 
         SynchronizedCounter counter = new SynchronizedCounter();
 
